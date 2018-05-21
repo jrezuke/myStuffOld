@@ -1,0 +1,12 @@
+<form novalidate autocomplete="off" (ngSubmit)="onSubmit()" [formGroup]="todoForm">
+  
+    <label for="title">Title</label>
+  
+    <input id="title" type="text"  />
+    <button type="submit">Submit</button>
+  
+</form>
+<br>Dirty: {{ todoForm.dirty }} 
+<br>Touched: {{ todoForm.touched }}
+<br>Valid: {{ todoForm.valid }}
+<br>Value: {{ todoForm.value | json }}
