@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators, FormControlName } from '@angular/forms';
-import { Todo } from "../todo-model";
+import { Todo } from '../todo-model';
 @Component({
   selector: 'app-todo-new',
   templateUrl: './todo-new.component.html',
@@ -12,18 +12,19 @@ export class TodoNewComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.todoForm = this.fb.group({  
+    this.todoForm = this.fb.group({
       id: '',
       title: '',
       started: '',
       completed: '',
-      comment: ''
+      comment: '',
+      archived: ''
 
     });
   }
 
   onSubmit() {
-    console.log("onSubmit")
+    console.log('onSubmit')
   }
 
 }

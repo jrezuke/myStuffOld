@@ -6,12 +6,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { MatButtonModule, 
-  MatIconModule, 
-  MatInputModule, 
-  MatFormFieldModule, 
-  MatDatepickerModule, 
-  MatNativeDateModule} from '@angular/material';
+import { MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatCheckboxModule} from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,6 +25,7 @@ import { AboutComponent } from './about/about.component';
 import 'hammerjs';
 import { TodoNewComponent } from './todo/todo-new/todo-new.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TodoModule } from './todo/todo.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,12 +40,15 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    TodoModule,
     MatButtonModule,
+    MatCardModule,
     MatSidenavModule,
     MatListModule,
-    MatToolbarModule, 
+    MatToolbarModule,
     MatIconModule,
     MatInputModule,
+    MatCheckboxModule,
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule

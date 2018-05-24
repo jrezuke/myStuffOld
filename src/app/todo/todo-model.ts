@@ -4,4 +4,5 @@ export class Todo{
     started: Date;
     completed: Date;
     comment: string;
+    archived: boolean;
 }

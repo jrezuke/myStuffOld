@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of todos">
+    {{item.title}}
+  </li>
+</ul>
+<button [routerLink]="['./new']">Add task</button>
+<router-outlet></router-outlet>

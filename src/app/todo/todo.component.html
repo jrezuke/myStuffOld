@@ -1,36 +1,3 @@
-<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
-    <div>
-        <mat-form-field>
-            <mat-label>Id</mat-label>
-            <input matInput value="" class="form-control" formControlName="id">
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field>
-            <mat-label>Title</mat-label>
-            <input matInput value="" class="form-control" formControlName="title">
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field>
-            <input matInput class="form-control" formControlName="started" [matDatepicker]="picker" placeholder="Start date">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field>
-            <input matInput class="form-control" formControlName="completed" [matDatepicker]="picker2" placeholder="Completed date">
-            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-            <mat-datepicker #picker2></mat-datepicker>
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field>
-            <mat-label>Comment</mat-label>
-            <input matInput value="" class="form-control" formControlName="comment">
-        </mat-form-field>
-    </div>
-    <button type="submit" md-raised-button>Submit</button>
-</form>
-<p>Form value: {{ todoForm.value | json }}</p>
+todo component
+<router-outlet>
+</router-outlet>
