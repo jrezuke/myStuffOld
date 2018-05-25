@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'todo', component: TodoComponent,
     children:[
       {path: 'list', component: TodoListComponent,
-      children[
+      children: [
         {path: 'new', component: TodoNewComponent}
       ]},
 

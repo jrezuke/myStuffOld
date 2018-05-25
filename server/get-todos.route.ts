@@ -1,7 +1,7 @@
 
 
 import {Request, Response} from 'express';
-import {TODOS} from "./db-data";
+import {TODOS} from './db-data';
 
 const db = require('./db');
 
@@ -9,12 +9,12 @@ export function getAllTodos(req: Request, res: Response) {
 
     db.any('select * from todo')
         .then(function(data){
-            res.status(200).json({status:'success', data:data})
+            res.status(200).json({status: 'success', data: data})
         })
         .catch(function(err){
-            console.log("error", err);
+            console.log('error', err);
         });
-    
+
 
 }
 

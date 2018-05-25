@@ -13,7 +13,8 @@ import { MatButtonModule,
   MatFormFieldModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatCheckboxModule} from '@angular/material';
+  MatCheckboxModule,
+  MatDialogModule} from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -51,6 +52,7 @@ import { TodoModule } from './todo/todo.module';
     MatCheckboxModule,
     MatFormFieldModule,
     MatDatepickerModule,
+    MatDialogModule,
     MatNativeDateModule
   ],
   providers: [],

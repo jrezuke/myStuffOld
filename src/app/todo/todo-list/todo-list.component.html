@@ -3,5 +3,5 @@
     {{item.title}}
   </li>
 </ul>
-<button [routerLink]="['./new']">Add task</button>
+<button (click)="onAdd()" >Add task</button>
 <router-outlet></router-outlet>
