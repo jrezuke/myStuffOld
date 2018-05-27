@@ -1,12 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import {
-  FormBuilder,
-  FormGroup,
-  Validators,
-  FormControlName
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControlName} from '@angular/forms';
 import { Todo } from '../todo-model';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-todo-new',
@@ -17,10 +13,11 @@ import { Todo } from '../todo-model';
 export class TodoNewComponent implements OnInit {
   todo = new Todo();
   todoForm: FormGroup;
-  mode = "new";
+  mode = 'new';
 
   constructor(
     private fb: FormBuilder,
+    private todoService: TodoService,
     private dialogRef: MatDialogRef<TodoNewComponent>,
     @Inject(MAT_DIALOG_DATA)
     { id, title, started, completed, comment, archived }: Todo
@@ -37,13 +34,11 @@ export class TodoNewComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSubmit() {
-    console.log('onSubmit');
-  }
 
   onSave() {
     console.log('onSave');
     this.dialogRef.close(this.todoForm.value);
+    this.todoService.addTodo(this.todoForm.value);
   }
 
   onClose() {
